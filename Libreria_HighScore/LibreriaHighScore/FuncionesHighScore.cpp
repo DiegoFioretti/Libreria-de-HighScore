@@ -4,7 +4,7 @@
 using namespace std;
 
 list <pair <int,string>> HighScores;
-list<pair<int, string>>::iterator it;
+list<pair<int,string>>::iterator it;
 
 void Test() {
 	cout << "Esto es una prueba" << endl;
@@ -20,6 +20,7 @@ void EliminarScore(string name) {
 	for (size_t i = 0; i < HighScores.size(); i++){
 		if (it->second == name){
 			HighScores.remove(*it);
+			break;
 		}
 		it++;
 	}
@@ -37,26 +38,33 @@ void GetScore(string name) {
 }
 
 void GetHighScore() {
-	it = HighScores.begin();
+	it = HighScores.end();
+	it--;
 	cout << "HIGH SCORE:" << it->second.c_str() << " con " << it->first << endl;
 }
 
 void GetTop5() {
-	it = HighScores.begin();
-	if (HighScores.size() < 5)
-	{
+	
+	if (HighScores.size() < 5){
 		cout << "TOP " << HighScores.size() << " SCORES" << endl;
-		for (size_t i = 0; i < HighScores.size(); i++) {
+		it = HighScores.end();
+		it--;
+		for (size_t i = HighScores.size(); i > 0; i--){
 			cout << it->second.c_str() << ": " << it->first << endl;
-			it++;
+			it--;
 		}
 	}
-	else if (HighScores.size() >= 5)
-	{
+	else if (HighScores.size() >= 5){
 		cout << "TOP 5 SCORES" << endl;
-		for (size_t i = 0; i < 5; i++) {
+		it = HighScores.begin();
+		for (size_t i = 0; i < 4; i++) {
+				it++;
+		}
+		for (size_t i = 5; i > 0; i--) {
 			cout << it->second.c_str() << ": " << it->first << endl;
-			it++;
+			if (i > 1) {
+				it--;
+			}
 		}
 	}
 }
