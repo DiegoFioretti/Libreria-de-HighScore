@@ -40,12 +40,11 @@ void GetScore(string name) {
 void GetHighScore() {
 	it = HighScores.end();
 	it--;
-	cout << "HIGH SCORE:" << it->second.c_str() << " con " << it->first << endl;
+	cout << "HIGH SCORE: " << it->second.c_str() << " con " << it->first << endl;
 }
 
-void GetTop5() {
-	
-	if (HighScores.size() < 5){
+void GetTopGroup(int cant) {	
+	if (HighScores.size() < cant){
 		cout << "TOP " << HighScores.size() << " SCORES" << endl;
 		it = HighScores.end();
 		it--;
@@ -54,13 +53,13 @@ void GetTop5() {
 			it--;
 		}
 	}
-	else if (HighScores.size() >= 5){
-		cout << "TOP 5 SCORES" << endl;
+	else if (HighScores.size() >= cant){
+		cout << "TOP "<<cant<<" SCORES" << endl;
 		it = HighScores.begin();
-		for (size_t i = 0; i < 4; i++) {
+		for (size_t i = 0; i < cant - 1; i++) {
 				it++;
 		}
-		for (size_t i = 5; i > 0; i--) {
+		for (size_t i = cant; i > 0; i--) {
 			cout << it->second.c_str() << ": " << it->first << endl;
 			if (i > 1) {
 				it--;

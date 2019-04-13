@@ -29,6 +29,6 @@ void main() {
 	GetHighScore();
 	cin.get();
 	cout << "Mostrando el TOP 5 de Scores" << endl;
-	GetTop5();
+	GetTopGroup(5);
 	cin.get();
 }

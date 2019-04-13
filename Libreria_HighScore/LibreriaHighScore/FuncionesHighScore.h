@@ -13,4 +13,4 @@ void GetScore(string name);
 
 void GetHighScore();
 
-void GetTop5();
+void GetTopGroup(int cant);
