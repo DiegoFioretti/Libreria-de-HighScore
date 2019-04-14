@@ -17,7 +17,7 @@ void NuevoScore(string name, int score) {
 
 void EliminarScore(string name) {
 	it = HighScores.begin();
-	for (size_t i = 0; i < HighScores.size(); i++){
+	for (int i = 0; i < HighScores.size(); i++){
 		if (it->second == name){
 			HighScores.remove(*it);
 			break;
@@ -29,11 +29,50 @@ void EliminarScore(string name) {
 
 void GetScore(string name) {
 	it = HighScores.begin();
-	for (size_t i = 0; i < HighScores.size(); i++) {
+	for (int i = 0; i < HighScores.size(); i++) {
 		if (it->second == name) {
 			cout<<it->second.c_str()<<": "<<it->first<<endl;
 		}
 		it++;
+	}
+}
+
+int GetScoreByName(string name) {
+	it = HighScores.begin();
+	for (int i = 0; i < HighScores.size(); i++) {
+		if (it->second == name) {
+			return it->first;
+		}
+		it++;
+	}
+	return -012345;
+}
+
+int GetScoreByPosition(int position) {
+	if (HighScores.size() < position){
+		return -012345;
+	}
+	else{
+		it = HighScores.end();
+		it--;
+		for (int i = 1; i < position; i++) {
+			it--;
+		}
+		return it->first;
+	}
+}
+
+string GetNameByPosition(int position) {
+	if (HighScores.size() < position) {
+		return "Posición no existe";
+	}
+	else {
+		it = HighScores.end();
+		it--;
+		for (int i = 1; i < position; i++) {
+			it--;
+		}
+		return it->second;
 	}
 }
 
@@ -48,7 +87,7 @@ void GetTopGroup(int cant) {
 		cout << "TOP " << HighScores.size() << " SCORES" << endl;
 		it = HighScores.end();
 		it--;
-		for (size_t i = HighScores.size(); i > 0; i--){
+		for (int i = HighScores.size(); i > 0; i--){
 			cout << it->second.c_str() << ": " << it->first << endl;
 			it--;
 		}
@@ -56,10 +95,10 @@ void GetTopGroup(int cant) {
 	else if (HighScores.size() >= cant){
 		cout << "TOP "<<cant<<" SCORES" << endl;
 		it = HighScores.begin();
-		for (size_t i = 0; i < cant - 1; i++) {
+		for (int i = 0; i < cant - 1; i++) {
 				it++;
 		}
-		for (size_t i = cant; i > 0; i--) {
+		for (int i = cant; i > 0; i--) {
 			cout << it->second.c_str() << ": " << it->first << endl;
 			if (i > 1) {
 				it--;

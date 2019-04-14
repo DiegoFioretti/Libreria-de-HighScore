@@ -1,1 +1,9 @@
-﻿  LibreriaHighScore.vcxproj -> C:\Users\Nikolaus\Documents\Clones\Libreria-de-HighScore\Libreria_HighScore\Debug\LibreriaHighScore.lib
+﻿  FuncionesHighScore.cpp
+c:\users\nikolaus\documents\clones\libreria-de-highscore\libreria_highscore\libreriahighscore\funcioneshighscore.cpp(20): warning C4018: '<': signed/unsigned mismatch
+c:\users\nikolaus\documents\clones\libreria-de-highscore\libreria_highscore\libreriahighscore\funcioneshighscore.cpp(32): warning C4018: '<': signed/unsigned mismatch
+c:\users\nikolaus\documents\clones\libreria-de-highscore\libreria_highscore\libreriahighscore\funcioneshighscore.cpp(42): warning C4018: '<': signed/unsigned mismatch
+c:\users\nikolaus\documents\clones\libreria-de-highscore\libreria_highscore\libreriahighscore\funcioneshighscore.cpp(52): warning C4018: '<': signed/unsigned mismatch
+c:\users\nikolaus\documents\clones\libreria-de-highscore\libreria_highscore\libreriahighscore\funcioneshighscore.cpp(66): warning C4018: '<': signed/unsigned mismatch
+c:\users\nikolaus\documents\clones\libreria-de-highscore\libreria_highscore\libreriahighscore\funcioneshighscore.cpp(86): warning C4018: '<': signed/unsigned mismatch
+c:\users\nikolaus\documents\clones\libreria-de-highscore\libreria_highscore\libreriahighscore\funcioneshighscore.cpp(95): warning C4018: '>=': signed/unsigned mismatch
+  LibreriaHighScore.vcxproj -> C:\Users\Nikolaus\Documents\Clones\Libreria-de-HighScore\Libreria_HighScore\Debug\LibreriaHighScore.lib

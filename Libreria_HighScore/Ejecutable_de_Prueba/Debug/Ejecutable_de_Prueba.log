@@ -1,1 +1,3 @@
-﻿  Ejecutable_de_Prueba.vcxproj -> C:\Users\Nikolaus\Documents\Clones\Libreria-de-HighScore\Libreria_HighScore\Debug\Ejecutable_de_Prueba.exe
+﻿  Main.cpp
+c:\users\nikolaus\documents\clones\libreria-de-highscore\libreria_highscore\ejecutable_de_prueba\main.cpp(12): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Ejecutable_de_Prueba.vcxproj -> C:\Users\Nikolaus\Documents\Clones\Libreria-de-HighScore\Libreria_HighScore\Debug\Ejecutable_de_Prueba.exe
