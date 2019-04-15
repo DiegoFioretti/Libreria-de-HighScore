@@ -3,11 +3,9 @@
 #include <list>
 using namespace std;
 
-void Test();
+void NewScore(string name, int score);
 
-void NuevoScore(string name, int score);
-
-void EliminarScore(string name);
+void DeleteScore(string name);
 
 void GetScore(string name);
 

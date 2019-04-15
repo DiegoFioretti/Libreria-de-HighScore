@@ -3,37 +3,45 @@
 #include <list>
 using namespace std;
 
-list <pair <int,string>> HighScores;
+list <pair<int,string>> HighScores;
 list<pair<int,string>>::iterator it;
 
-void Test() {
-	cout << "Esto es una prueba" << endl;
-}
+bool elementFound;
 
-void NuevoScore(string name, int score) {
+void NewScore(string name, int score) {
 	HighScores.push_back(make_pair(score,name));
 	HighScores.sort();
 }
 
-void EliminarScore(string name) {
+void DeleteScore(string name) {
 	it = HighScores.begin();
+	elementFound = false;
 	for (int i = 0; i < HighScores.size(); i++){
 		if (it->second == name){
 			HighScores.remove(*it);
+			elementFound = true;
 			break;
 		}
 		it++;
+	}
+	if (elementFound == false) {
+		cout << "Name not found" << endl;
 	}
 	HighScores.sort();
 }
 
 void GetScore(string name) {
 	it = HighScores.begin();
+	elementFound = false;
 	for (int i = 0; i < HighScores.size(); i++) {
 		if (it->second == name) {
+			elementFound = true;
 			cout<<it->second.c_str()<<": "<<it->first<<endl;
 		}
 		it++;
+	}
+	if (elementFound == false) {
+		cout << "Name not found" << endl;
 	}
 }
 
@@ -64,7 +72,7 @@ int GetScoreByPosition(int position) {
 
 string GetNameByPosition(int position) {
 	if (HighScores.size() < position) {
-		return "Posición no existe";
+		return "Position doesn't exist";
 	}
 	else {
 		it = HighScores.end();

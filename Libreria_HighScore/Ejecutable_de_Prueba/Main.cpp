@@ -10,17 +10,16 @@ void GetHighScore();
 void GetTop5();*/
 
 void main() {
-	Test();
 	cout << "Añadiendo 6 Scores" << endl;
-	NuevoScore("Alex", 10);
-	NuevoScore("Betty", 20);
-	NuevoScore("Carlos", 30);
-	NuevoScore("Danny", 40);
-	NuevoScore("Elias", 50);
-	NuevoScore("Fernando", 60);
+	NewScore("Alex", 10);
+	NewScore("Betty", 20);
+	NewScore("Carlos", 30);
+	NewScore("Danny", 40);
+	NewScore("Elias", 50);
+	NewScore("Fernando", 60);
 	cin.get();
 	cout << "Eliminando a Danny" << endl;
-	EliminarScore("Danny");
+	DeleteScore("Danny");
 	cin.get();
 	cout << "Consiguiendo el Score de Elias" << endl;
 	cout<<"El score de Elias es "<<GetScoreByName("Elias")<<endl;
